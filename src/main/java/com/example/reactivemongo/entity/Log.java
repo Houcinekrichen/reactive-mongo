@@ -71,4 +71,15 @@ public class Log {
         this.date = date;
         return this;
     }
+
+    @Override
+    public String toString() {
+        return "Log{" +
+                "id='" + id + '\'' +
+                ", service='" + service + '\'' +
+                ", message='" + message + '\'' +
+                ", level=" + level +
+                ", date=" + date +
+                '}';
+    }
 }
