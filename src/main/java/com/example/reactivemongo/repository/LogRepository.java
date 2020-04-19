@@ -21,4 +21,6 @@ public interface LogRepository extends ReactiveMongoRepository<Log,String> {
 
     @Tailable
     Flux<Log> findWithTailableCursorBy();
+
+    Flux<Log> findByMessage(String message);
 }
