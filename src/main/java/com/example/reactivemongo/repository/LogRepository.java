@@ -20,6 +20,5 @@ public interface LogRepository extends ReactiveMongoRepository<Log,String> {
     Flux<Log> findByLevel(Level level, Pageable pageable);
 
     @Tailable
-    @Query("{}")
-    Flux<Log> findAllLogs();
+    Flux<Log> findWithTailableCursorBy();
 }

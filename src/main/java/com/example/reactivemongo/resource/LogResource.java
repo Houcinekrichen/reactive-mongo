@@ -2,7 +2,6 @@ package com.example.reactivemongo.resource;
 
 import com.example.reactivemongo.entity.Level;
 import com.example.reactivemongo.entity.Log;
-import com.example.reactivemongo.repository.LogRepository;
 import com.example.reactivemongo.service.LogService;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -28,7 +27,7 @@ public class LogResource {
 
     @GetMapping(value = "all",produces = MediaType.APPLICATION_STREAM_JSON_VALUE)
     public Flux<Log> findByLevel(){
-        return service.findAll();
+        return service.findWithTailableCursorBy();
     }
 
     @GetMapping(value = "{level}",produces = MediaType.APPLICATION_STREAM_JSON_VALUE)

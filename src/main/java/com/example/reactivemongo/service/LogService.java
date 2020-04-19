@@ -21,8 +21,8 @@ public class LogService {
         return this.repository.save(log);
     }
 
-    public Flux<Log> findAll(){
-        return this.repository.findAllLogs();
+    public Flux<Log> findWithTailableCursorBy(){
+        return this.repository.findWithTailableCursorBy();
     }
 
     public Flux<Log> findByLevel(Level level){

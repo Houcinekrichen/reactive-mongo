@@ -1,9 +1,8 @@
-package com.example.reactivemongo.utils;
+package com.example.reactivemongo.util;
 
 import com.example.reactivemongo.entity.Level;
 import com.example.reactivemongo.entity.Log;
 import com.example.reactivemongo.service.LogService;
-import com.mongodb.MongoQueryException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
